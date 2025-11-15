@@ -1,0 +1,20 @@
+# My Experience Installing Xubuntu and Using QGIS2Web
+
+I shrank my E: drive to create 200 GB of unallocated space for installing Xubuntu.  
+I then used Rufus to prepare a bootable USB drive and launched the Xubuntu installer (Xubuntu 22.04.5 LTS "Jammy Jellyfish").  
+
+During installation:  
+- The unallocated space appeared as free space (no longer shown under E:)  
+- Created a 60 GB root (`/`) partition for Xubuntu  
+- Used remaining space for `/home` and swap  
+
+After installation, I used the terminal to install QGIS with `sudo` privileges.  
+The system automatically selected QGIS 3.22.4-Białowieża for my OS. Installation was successful. QGIS runs smoothly on my Dell Inspiron 5458 (Signature Edition, 8 GB RAM, 2.4 GHz Intel Core i7, 2017).
+
+---
+
+## Using QGIS2Web
+
+Since my project and layers were set to **EPSG:32645 (WGS 84 / UTM Zone 45N)**, I used the **qgis2web plugin** and selected **OpenLayers** for exporting HTML files.
+
+> OpenLayers supports projected coordinate systems more reliably than Leaflet, ensuring accurate geometry and spatial alignment in the published web map.
